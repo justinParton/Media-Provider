@@ -1,0 +1,11 @@
+{
+    "name": "gbfic/mediaprovider",
+    "description": "Generates Media API Responses with given providers",
+    "require": {
+        "fetchleo/laravel-xml": "dev-master",
+        "james-heinrich/getid3": "^1.9",
+        "guzzlehttp/guzzle": "^6.3",
+        "rebing/graphql-laravel": "^1.9"
+    },
+    "minimum-stability": "dev"
+}
