@@ -9,7 +9,7 @@ This package aims to provide feeds (XML,JSON,JSONP) that are specifically taylor
 Installation Notes will follow once the project has been added to packagist
 
 
-### Service Provider
+## Service Provider
 
 #### In your app config, add the `MediaServiceProvider` to the providers array.
 
@@ -24,11 +24,11 @@ Installation Notes will follow once the project has been added to packagist
 	php artisan vendor:publish
 ```
 	
-#### Migrations
+## Migrations
 
 Migrations will be added soon to provide a standardised data set for providers to work with.
 
-### Usage Example
+## Usage Example
 
 #### Create a Provider
 	
