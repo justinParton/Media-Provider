@@ -9,7 +9,7 @@ Installation Notes will follow once the project has been added to packagist
 
 ### Service Provider
 
-#### In your app config, add the `LaravelFacebookSdkServiceProvider` to the providers array.
+#### In your app config, add the `MediaServiceProvider` to the providers array.
 
 ```php
 'providers' => [
@@ -30,11 +30,11 @@ Migrations will be added soon to provide a standardised data set for providers t
 
 #### Create a Provider
 	
-To create a provider, create a class that implements GBFIC\MediaProvider\Providers\ProviderInterface, add the required methods that will transform your data. For examples see:
+To create a provider, create a class that implements GBFIC\MediaProvider\Providers\ProviderInterface and add the required methods that will transform your data. For examples see:
 
 ```
 GBFIC\MediaProvider\Providers\FireTvProvider;
-GBFIC\MediaProvider\Providers\RokuProvider
+GBFIC\MediaProvider\Providers\RokuProvider;
 ```
 
 Dont forget to add the provider to config/mediaprovider providers array so that it can be retrieved during initialization. 
@@ -42,7 +42,7 @@ Dont forget to add the provider to config/mediaprovider providers array so that 
 	
 #### Initializing MediaProvider
 
-	After you have created a provider:
+	After you have created a provider, simply create the Media object that takes two parameters, The data that you will transform, and the String key that is associated with your provider (stored in the config) :
 	
 ``` php
 
@@ -54,7 +54,7 @@ Dont forget to add the provider to config/mediaprovider providers array so that 
 		
 ```
 
-Every provider is requried to support json,xml, or jsonp. So call the necessary method to get the feed.
+Since every provider is requried have three basic methods, you can reliably call the following three methods to get feed data.
 	
 ``` php
 	// Every provider is requried to support json & xml. So call the necessary method to get the feed.
@@ -63,3 +63,6 @@ Every provider is requried to support json,xml, or jsonp. So call the necessary 
 	$mediaFeed = response($media->getJsonp("media"))->header('Content-Type', 'application/json');
 ```
 
+#### GraphQL
+
+Please see the graphql config file in the /app/Config directory for api locations and Query & Trait Sample Files.
