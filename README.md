@@ -43,7 +43,7 @@ Once you have created a provider, add it to the config file so that it is retrie
 	
 #### Initializing MediaProvider
 
-After you have created a provider, simply create the Media object that takes two parameters, The data that you will transform, and the key associated with your provider (stored in the config) :
+After you have created a provider, simply create the Media object that takes two parameters, The data that you will transform, and the key associated with your provider (stored in the config)
 
 ``` php
 
