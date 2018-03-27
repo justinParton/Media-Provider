@@ -1,5 +1,7 @@
 # Media Feed Providers
 
+This package Readme file is currently under development and will be updated once all services have been implemented.
+
 This package aims to provide feeds (XML,JSON,JSONP) that are specifically taylored to the Provider requesting.
 
 ## Installation
