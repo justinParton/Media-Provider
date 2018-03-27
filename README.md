@@ -9,14 +9,14 @@ Installation Notes will follow once the project has been added to packagist
 
 ### Service Provider
 
-####In your app config, add the `LaravelFacebookSdkServiceProvider` to the providers array.
+#### In your app config, add the `LaravelFacebookSdkServiceProvider` to the providers array.
 
 ```php
 'providers' => [
     GBFIC\MediaProvider\MediaServiceProvider::class,
     ];
 ```
-####Publish the necessary config files
+#### Publish the necessary config files
 
 ```
 	php artisan vendor:publish
@@ -28,7 +28,7 @@ Migrations will be added soon to provide a standardised data set for providers t
 
 ### Usage Example
 
-####Create a Provider
+#### Create a Provider
 	
 	To create a provider, create a class that implements GBFIC\MediaProvider\Providers\ProviderInterface
 	and implement the required methods. 
@@ -49,7 +49,8 @@ Migrations will be added soon to provide a standardised data set for providers t
 	);
 		
 ```
-	Every provider is requried to support json,xml, or jsonp. So call the necessary method to get the feed.
+
+Every provider is requried to support json,xml, or jsonp. So call the necessary method to get the feed.
 	
 ``` php
 	// Every provider is requried to support json & xml. So call the necessary method to get the feed.
