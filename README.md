@@ -37,7 +37,7 @@ GBFIC\MediaProvider\Providers\FireTvProvider;
 GBFIC\MediaProvider\Providers\RokuProvider;
 ```
 
-Dont forget to add the provider to config/mediaprovider providers array so that it can be retrieved during initialization. 
+Don't forget to add the provider to config/mediaprovider providers array so that it can be retrieved during initialization.
 
 	
 #### Initializing MediaProvider
@@ -66,3 +66,4 @@ Since every provider is requried have three basic methods, you can reliably call
 #### GraphQL
 
 Please see the graphql config file in the /app/Config directory for api locations and Query & Trait Sample Files.
+
