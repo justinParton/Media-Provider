@@ -32,20 +32,19 @@ Migrations will be added soon to provide a standardised data set for providers t
 
 #### Create a Provider
 	
-To create a provider, create a class that implements GBFIC\MediaProvider\Providers\ProviderInterface and add the required methods that will transform your data. For examples see:
+Providers are essential to transforming data from the database to a feed for users. To create a provider, create a class that implements GBFIC\MediaProvider\Providers\ProviderInterface and add the required methods that will transform your data. For examples see:
 
 ```
 GBFIC\MediaProvider\Providers\FireTvProvider;
 GBFIC\MediaProvider\Providers\RokuProvider;
 ```
-
-Don't forget to add the provider to config/mediaprovider providers array so that it can be retrieved during initialization.
-
+ 
+Once you have created a provider, add it to the config file so that it is retrievable during runtime.
 	
 #### Initializing MediaProvider
 
-	After you have created a provider, simply create the Media object that takes two parameters, The data that you will transform, and the String key that is associated with your provider (stored in the config) :
-	
+After you have created a provider, simply create the Media object that takes two parameters, The data that you will transform, and the key associated with your provider (stored in the config) :
+
 ``` php
 
 	// Initialize MediaProvider
