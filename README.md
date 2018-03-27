@@ -30,10 +30,14 @@ Migrations will be added soon to provide a standardised data set for providers t
 
 #### Create a Provider
 	
-	To create a provider, create a class that implements GBFIC\MediaProvider\Providers\ProviderInterface
-	and implement the required methods. 
-	
-	Dont forget to add the provider to config/mediaprovider providers array so that it can be retrieved during initialization. 
+To create a provider, create a class that implements GBFIC\MediaProvider\Providers\ProviderInterface, add the required methods that will transform your data. For examples see:
+
+```
+GBFIC\MediaProvider\Providers\FireTvProvider;
+GBFIC\MediaProvider\Providers\RokuProvider
+```
+
+Dont forget to add the provider to config/mediaprovider providers array so that it can be retrieved during initialization. 
 
 	
 #### Initializing MediaProvider
