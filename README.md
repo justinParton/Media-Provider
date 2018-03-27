@@ -43,14 +43,23 @@ Once you have created a provider, add it to the config file so that it is retrie
 	
 #### Initializing MediaProvider
 
-After you have created a provider, simply create the Media object that takes two parameters, The data that you will transform, and the key associated with your provider (stored in the config)
+After you have created a provider, simply create the Media object that takes two parameters, The data that you will transform, and the key associated with your provider (stored in the config) 
+
+If config has provider:
+
+``` php
+'roku' => GBFIC\MediaProvider\Providers\RokuProvider::class,
+
+```
+
+Then Intiialization would be:
 
 ``` php
 
 	// Initialize MediaProvider
 	$media = new Media(
-		$dataFromDatabase, 
-		$provider
+		DATA_TO_BE_TRANSFORMED, 
+		'roku'
 	);
 		
 ```
@@ -59,9 +68,9 @@ Since every provider is requried have three basic methods, you can reliably call
 	
 ``` php
 	// Every provider is requried to support json & xml. So call the necessary method to get the feed.
-	$mediaFeed = response($media->getJson())->header('Content-Type', 'application/json');
-	$mediaFeed = response($media->getXml()->asXML())->header('Content-Type', 'text/xml');
-	$mediaFeed = response($media->getJsonp("media"))->header('Content-Type', 'application/json');
+	$mediaFeed = response($media->getJson())
+	$mediaFeed = response($media->getXml()->asXML())
+	$mediaFeed = response($media->getJsonp(CALLBACK_KEY))
 ```
 
 #### GraphQL
