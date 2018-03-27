@@ -5,7 +5,12 @@
         "fetchleo/laravel-xml": "dev-master",
         "james-heinrich/getid3": "^1.9",
         "guzzlehttp/guzzle": "^6.3",
+<<<<<<< HEAD
         "rebing/graphql-laravel": "^1.9"
+=======
+        "rebing/graphql-laravel": "^1.9",
+		"noh4ck/graphiql": "@dev"
+>>>>>>> 63d04d1d99263bd772a6b6ab627cd24131213e37
     },
     "minimum-stability": "dev"
 }
